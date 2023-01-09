@@ -27,7 +27,7 @@ body {
 
 .name {
   color: white;
-  font-size: 3em;
+  font-size: 3rem;
   font-family: "Shadows Into Light", cursive;
   padding: 1rem 2rem;
   text-align: center;
@@ -49,8 +49,4 @@ body {
 .nav-link {
   color: white;
   text-decoration: none;
-}
-
-.nav-link-black {
-  color: black;
 }
