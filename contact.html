@@ -5,34 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Shadows+Into+Light&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Annie+Use+Your+Telescope&family=Kaushan+Script&family=Neucha&family=Roboto+Flex:opsz@8..144&family=Thasadith&family=Viaoda+Libre&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <nav class="navbar">
-      <ul class="nav-menu">
-        <a href="index.html">Nina Lane</a>
-        <li class="nav-item-black">
-          <a href="about.html" class="about">About</a>
-        </li>
-        <li class="nav-item"><a href="#" class="nav-link-black">Music</a></li>
-        <li class="nav-item--black">
-          <a
-            href="https://www.youtube.com/@ninalanemusic9493/playlists"
-            target="_blank"
-            class="nav-link-black"
-            >Video</a
-          >
-        </li>
-        <li class="nav-item--black">
-          <a href="contact.html" class="contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <h1>Contact</h1>
-    <p></p>
+    <header class="header header-contact">
+      <div>
+        <h1><a href="index.html" class="name-contact">Nina Lane</a></h1>
+      </div>
+      <div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <nav>
+          <ul>
+            <li><a href="about.html" class="nav-item">About</a></li>
+            <li>
+              <a
+                href="https://ninalane.bandcamp.com/"
+                class="nav-item"
+                target="_blank"
+                >Music</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@ninalanemusic9493/playlists"
+                class="nav-item"
+                target="_blank"
+                >Video</a
+              >
+            </li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+            <li>
+              <a
+                href="https://www.facebook.com/NinaLaneMusic"
+                class="fb nav-item"
+                target="_blank"
+                ><img
+                  src="../images/facebook.png"
+                  alt="facebook logo"
+                  width="25"
+                  height="25"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+      </div>
+    </header>
+    <div class="img-container-contact"></div>
+    <div class="center-text">
+      <p>For inquiries, please contact:</p>
+      <br />
+      <p><strong>ninalanemusic@gmail.com</strong></p>
+    </div>
   </body>
 </html>

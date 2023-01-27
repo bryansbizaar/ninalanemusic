@@ -33,33 +33,20 @@ header {
   margin: 1rem auto;
   z-index: 999;
   width: 100%;
-}
-
-.header-about {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
 
-.name-about,
-.name-contact {
+.name-about {
   color: black;
   font-size: 3.5rem;
   font-family: "Viaoda Libre", cursive;
   font-weight: 600;
 }
 
-.name-contact {
-  padding-left: 2rem;
-}
-
-.name-contact:hover,
 .name-about:hover {
   color: rgb(87, 88, 88);
 }
-
-/* .name-about:hover {
-  color: rgb(87, 88, 88);
-} */
 
 nav {
   position: absolute;
@@ -72,10 +59,6 @@ nav {
 
 nav li {
   margin-bottom: 1rem;
-}
-
-.nav-item {
-  margin-left: 1.5rem;
 }
 
 nav a {
@@ -109,22 +92,18 @@ nav a:hover {
   height: 100%;
 }
 
-.ntl-about {
-  right: 0;
-  justify-content: flex-end;
-  grid-column: 2 / 3;
-  justify-self: right;
-  margin-right: 2rem;
-}
-
 .nav-toggle-label {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: 1.5rem;
+  right: 0;
+  margin-right: 3rem;
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  grid-column: 2 / 3;
+  justify-self: right;
 }
 
 .nav-toggle-label:hover {
@@ -156,15 +135,16 @@ nav a:hover {
   bottom: 9px;
 }
 
+.text-container {
+  padding: 0rem 3rem 3rem;
+}
+
 .title {
   font-family: "Viaoda Libre", cursive;
   font-weight: 700;
   color: black;
   text-align: center;
   padding: 1rem;
-}
-.text-container {
-  padding: 0rem 3rem 3rem;
 }
 
 .text {
@@ -175,13 +155,6 @@ nav a:hover {
   padding: 1rem;
   background: white;
   border-radius: 0.5rem;
-}
-
-.center-text {
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.25rem;
-  font-family: "Thasadith", sans-serif;
 }
 
 @media screen and (min-width: 48rem) {
@@ -195,11 +168,10 @@ nav a:hover {
     margin: 0;
   }
 
-  .name-about,
-  .name-contact {
+  .name-about {
+    /* grid-column: 2 / span 1; */
     margin-left: 1rem;
     font-size: 4.5rem;
-    padding: 0;
   }
 
   nav {
@@ -220,10 +192,6 @@ nav a:hover {
 
   nav li {
     margin: 1rem;
-  }
-
-  .nav-item {
-    margin: 0;
   }
 
   nav a:hover {
