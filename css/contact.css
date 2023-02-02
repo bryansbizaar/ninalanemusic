@@ -43,7 +43,6 @@ nav {
   position: absolute;
   text-align: left;
   top: 150%;
-  /* min-width: 6rem; */
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
@@ -131,13 +130,6 @@ nav a:hover {
   padding: 0rem 3rem 3rem;
 }
 
-/* .text {
-  font-size: 1.25rem;
-  padding: 1rem;
-  background: white;
-  border-radius: 0.5rem;
-} */
-
 .center-text {
   text-align: center;
   padding: 2rem;
@@ -194,62 +186,4 @@ nav a:hover {
   .text-container {
     padding: 0rem 7.5rem 3rem;
   }
-
-  /* @media only screen and (min-width: 60rem) {
-    .text-container {
-      padding: 0rem 12rem;
-    }
-  } */
-  /* .nav-toggle-label {
-    display: none;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: 0.5fr auto minmax(30rem, 3fr) 1fr;
-  }
-
-  .name-black {
-    grid-column: 2 / 3;
-    margin-left: 3rem;
-  }
-
-  nav {
-    all: unset;
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav a {
-    opacity: 1;
-    color: black;
-    text-shadow: 0px 0px;
-    margin-right: 1.5rem;
-  }
-
-  nav ul {
-    display: flex;
-    margin-top: 1.5rem;
-  }
-
-  nav li {
-    margin: 0;
-  }
-
-  nav a:hover {
-    color: rgb(87, 88, 88);
-    cursor: pointer;
-  }
-
-  .text-container {
-    padding: 0rem 7.5rem 3rem;
-  }
-}
-
-@media only screen and (min-width: 60rem) {
-  .text-container {
-    padding: 0rem 12rem;
-  } */
 }

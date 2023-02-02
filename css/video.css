@@ -6,24 +6,52 @@
   text-decoration: none;
 }
 
-.bg-img {
-  background: url(../images/bw-cover.jpg);
+.vidwrapper {
+  width: 100%;
+  max-width: 50rem;
+  margin: 3rem auto;
 }
 
-.img-container-contact {
-  background: url(../images/black.jpg);
+.vidcontainer {
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
 }
 
-.bg-img,
-.img-container-contact {
-  height: 80vh;
+.vidcontainer iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  padding: 1rem;
+}
+
+/* .img-container-video {
+  height: 75vh;
+  background: url(../images/hand.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+} */
+
+.img {
+  height: 75vh;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
-body {
+body,
+header {
   background: rgb(226, 223, 223);
 }
 
@@ -31,20 +59,19 @@ header {
   text-align: center;
   position: fixed;
   margin: 0 auto;
-  z-index: 999;
   width: 100%;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  z-index: 999;
 }
 
-.name-about {
+.name-contact {
   color: black;
   font-size: 3.5rem;
+  padding-left: 2rem;
   font-family: "Viaoda Libre", cursive;
   font-weight: 600;
 }
 
-.name-about:hover {
+.name-contact:hover {
   color: rgb(87, 88, 88);
 }
 
@@ -59,6 +86,10 @@ nav {
 
 nav li {
   margin-bottom: 1rem;
+}
+
+.nav-item {
+  margin-left: 1.5rem;
 }
 
 nav a {
@@ -96,14 +127,10 @@ nav a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  margin-right: 3rem;
+  margin-left: 1.5rem;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  grid-column: 2 / 3;
-  justify-self: right;
 }
 
 .nav-toggle-label:hover {
@@ -135,26 +162,27 @@ nav a:hover {
   bottom: 9px;
 }
 
-.text-container {
-  padding: 0rem 3rem 3rem;
-}
-
 .title {
   font-family: "Viaoda Libre", cursive;
   font-weight: 700;
   color: black;
   text-align: center;
-  padding: 1rem;
+  padding-top: 2rem;
 }
 
-.text {
-  font-size: 1.25rem;
-  /* font-family: "Roboto Flex", sans-serif; */
-  font-weight: 600;
-  font-family: "Thasadith", sans-serif;
-  padding: 1rem;
-  background: white;
-  border-radius: 0.5rem;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.footer-item {
+  display: inline-block;
+}
+
+.bc {
+  padding-top: 0.25rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -168,10 +196,14 @@ nav a:hover {
     margin: 0;
   }
 
-  .name-about {
-    /* grid-column: 2 / span 1; */
+  .img {
+    padding-top: 4rem;
+  }
+
+  .name-contact {
     margin-left: 1rem;
     font-size: 4.5rem;
+    padding: 0;
   }
 
   nav {
@@ -194,6 +226,10 @@ nav a:hover {
     margin: 1rem;
   }
 
+  .nav-item {
+    margin: 0;
+  }
+
   nav a:hover {
     color: rgb(87, 88, 88);
     cursor: pointer;
@@ -202,10 +238,8 @@ nav a:hover {
   .text-container {
     padding: 0rem 7.5rem 3rem;
   }
-}
 
-@media only screen and (min-width: 60rem) {
-  .text-container {
-    padding: 0rem 12rem;
+  .footer-item {
+    padding: 0 2rem;
   }
 }
