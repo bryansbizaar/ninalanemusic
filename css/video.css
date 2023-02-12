@@ -80,7 +80,8 @@ nav li {
   margin-bottom: 1rem;
 }
 
-.nav-item {
+.nav-item,
+.social-link {
   margin-left: 1.5rem;
 }
 
