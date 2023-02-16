@@ -57,10 +57,6 @@ header {
   color: rgb(87, 88, 88);
 }
 
-/* .name-about:hover {
-  color: rgb(87, 88, 88);
-} */
-
 nav {
   position: absolute;
   text-align: left;
@@ -169,7 +165,6 @@ nav a:hover {
 
 .text {
   font-size: 1.25rem;
-  /* font-family: "Roboto Flex", sans-serif; */
   font-weight: 600;
   font-family: "Thasadith", sans-serif;
   padding: 1rem;

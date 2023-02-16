@@ -27,10 +27,6 @@ header {
   color: white;
   font-size: 3.5rem;
   text-shadow: 2px 2px black;
-  /*font-family: "Amatic SC", cursive;
-   font-family: "Annie Use Your Telescope", cursive;
-  font-family: "Kaushan Script", cursive;
-  font-family: "Neucha", cursive;*/
   font-family: "Viaoda Libre", cursive;
   font-weight: 500;
 }
@@ -123,13 +119,9 @@ nav a:hover {
 
   header {
     display: grid;
-    /* grid-template-columns: 0.5fr auto minmax(30rem, 3fr) 1fr; */
-    /* grid-template-columns: 1fr 1fr; */
   }
 
   .name {
-    /* grid-column: 2 / 3; */
-    /* margin-left: 3rem; */
     font-size: 4.5rem;
   }
 
