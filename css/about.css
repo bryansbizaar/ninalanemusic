@@ -10,6 +10,7 @@
   height: 75vh;
   width: 100%;
   object-fit: cover;
+  margin-top: calc(12.5vh);
 }
 
 body {
@@ -188,9 +189,9 @@ nav a:hover {
     background: rgb(226, 223, 223);
   }
 
-  .img-about {
+  /* .img-about {
     padding-top: 6.3rem;
-  }
+  } */
 
   .name-about {
     margin-left: 1rem;

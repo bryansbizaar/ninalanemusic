@@ -37,6 +37,7 @@
   height: 75vh;
   width: 100%;
   object-fit: cover;
+  margin-top: calc(12.5vh);
 }
 
 body {
@@ -198,9 +199,9 @@ nav a:hover {
     position: fixed;
   }
 
-  .img-video {
+  /* .img-video {
     padding-top: 6.3rem;
-  }
+  } */
 
   .name-video {
     margin-left: 1rem;

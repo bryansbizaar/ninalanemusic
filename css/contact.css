@@ -10,6 +10,7 @@
   height: 75vh;
   width: 100%;
   object-fit: cover;
+  margin-top: calc(12.5vh);
 }
 
 body {
