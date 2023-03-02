@@ -165,7 +165,7 @@ nav a:hover {
   padding-top: 0.25rem;
 }
 
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 52rem) {
   .nav-toggle-label {
     display: none;
   }
@@ -178,13 +178,12 @@ nav a:hover {
   }
 
   .name-contact {
-    margin-left: 1rem;
     font-size: 4.5rem;
     padding: 0;
   }
 
   .img-contact {
-    margin-top: calc(8vh);
+    margin-top: calc(12vh);
   }
 
   nav {
