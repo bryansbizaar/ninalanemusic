@@ -10,7 +10,6 @@
   height: 75vh;
   width: 100%;
   object-fit: cover;
-  margin-top: calc(12.5vh);
 }
 
 body {
@@ -166,7 +165,7 @@ nav a:hover {
   padding-top: 0.25rem;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 45rem) {
   .nav-toggle-label {
     display: none;
   }
@@ -182,6 +181,10 @@ nav a:hover {
     margin-left: 1rem;
     font-size: 4.5rem;
     padding: 0;
+  }
+
+  .img-contact {
+    margin-top: calc(8vh);
   }
 
   nav {

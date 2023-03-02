@@ -10,7 +10,6 @@
   height: 75vh;
   width: 100%;
   object-fit: cover;
-  margin-top: calc(12.5vh);
 }
 
 body {
@@ -131,7 +130,9 @@ nav a:hover {
 }
 
 .text-container {
-  padding: 0rem 3rem 3rem;
+  padding: 0 3rem 3rem;
+  margin: 0 auto;
+  max-width: 52rem;
 }
 
 .title {
@@ -176,7 +177,7 @@ nav a:hover {
   padding-top: 0.25rem;
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 52rem) {
   .nav-toggle-label {
     display: none;
   }
@@ -189,12 +190,12 @@ nav a:hover {
     background: rgb(226, 223, 223);
   }
 
-  /* .img-about {
-    padding-top: 6.3rem;
-  } */
+  .img-about {
+    margin-top: calc(9vh);
+  }
 
   .name-about {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     font-size: 4.5rem;
   }
 
@@ -224,7 +225,9 @@ nav a:hover {
   }
 
   .text-container {
-    padding: 0rem 7.5rem 3rem;
+    padding: 0rem 4rem 3rem;
+    max-width: 65rem;
+    margin: 0 auto;
   }
 
   .footer-item {
@@ -232,8 +235,8 @@ nav a:hover {
   }
 }
 
-@media only screen and (min-width: 60rem) {
-  .text-container {
-    padding: 0rem 12rem 3rem;
+@media only screen and (min-width: 55rem) {
+  .img-about {
+    margin-top: calc(12.25vh);
   }
 }
