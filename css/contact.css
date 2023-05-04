@@ -40,24 +40,26 @@ header {
 nav {
   position: absolute;
   text-align: left;
-  top: 110%;
+  top: 100%;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
 }
 
 nav li {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  /* margin: 1rem 0; */
+  margin: 0.75rem 1rem 0.5rem;
 }
 
-.nav-item,
+/* .nav-item, */
 .social-link {
   margin-left: 1.5rem;
 }
 
 nav a {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   font-family: "Viaoda Libre", cursive;
   text-transform: uppercase;
@@ -163,6 +165,21 @@ nav a:hover {
 
 .bc {
   padding-top: 0.25rem;
+}
+
+@media screen and (min-width: 48rem) {
+  nav li {
+    /* margin: 0.75rem 1rem 1rem; */
+    margin: 1rem 1.5rem;
+  }
+
+  nav a {
+    font-size: 1.25rem;
+  }
+
+  /* .name-about {
+    margin: 0;
+  } */
 }
 
 @media screen and (min-width: 52rem) {
