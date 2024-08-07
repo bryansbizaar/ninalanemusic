@@ -54,7 +54,7 @@ header {
 
 .name-video {
   color: black;
-  font-size: 3.5rem;
+  font-size: 3rem;
   padding-left: 2rem;
   font-family: "Viaoda Libre", cursive;
   font-weight: 600;
@@ -67,25 +67,28 @@ header {
 nav {
   position: absolute;
   text-align: left;
-  top: 110%;
-  width: 7rem;
+  top: 100%;
+  /* width: 7rem; */
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
 }
 
 nav li {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  /* margin: 1rem 0; */
+  margin: 0.75rem 1rem 0.5rem;
 }
 
-.nav-item,
+/* .nav-item, */
 .social-link {
   margin-left: 1.5rem;
 }
 
 nav a {
   color: white;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
+  font-size: 1rem;
   font-weight: 700;
   font-family: "Viaoda Libre", cursive;
   text-transform: uppercase;
@@ -186,6 +189,21 @@ nav a:hover {
   padding-top: 0.25rem;
 }
 
+@media screen and (min-width: 48rem) {
+  nav li {
+    /* margin: 0.75rem 1rem 1rem; */
+    margin: 1rem 1.5rem;
+  }
+
+  nav a {
+    font-size: 1.25rem;
+  }
+
+  /* .name-about {
+    margin: 0;
+  } */
+}
+
 @media screen and (min-width: 52rem) {
   .nav-toggle-label {
     display: none;
@@ -196,6 +214,7 @@ nav a:hover {
     grid-template-columns: 1fr 1fr;
     margin: 0;
     position: fixed;
+    box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.15);
   }
 
   .img-video {
