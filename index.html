@@ -5,15 +5,219 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nina Lane</title>
-    <link rel="stylesheet" href="./css/home.css" />
+    <meta
+      name="description"
+      content="Nina Lane - Singer, songwriter, and guitarist from New Zealand. Original music and performances."
+    />
+    <meta
+      name="keywords"
+      content="Nina Lane, musician, singer, songwriter, guitarist, New Zealand, folk, original music"
+    />
+    <meta name="author" content="Nina Lane" />
+    <meta property="og:title" content="Nina Lane - Singer/Songwriter" />
+    <meta
+      property="og:description"
+      content="Singer, songwriter, and guitarist from New Zealand. Original music and performances."
+    />
+    <meta property="og:image" content="images/fern.jpg" />
+    <meta property="og:url" content="https://ninalanemusic.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; frame-src https://www.youtube.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self';" />
+
+    <!-- Preload critical resources for instant loading -->
+    <link rel="preload" as="image" href="images/fern.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Annie+Use+Your+Telescope&family=Covered+By+Your+Grace&family=Kaushan+Script&family=Neucha&family=Viaoda+Libre&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Viaoda+Libre:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      /* Critical CSS - Exact Original Home Page Styles Inlined */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      .bg-img {
+        height: 100vh;
+        background-image: url(images/fern.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      header {
+        text-align: center;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+      }
+
+      .name {
+        padding-left: 2rem;
+        color: white;
+        font-size: 3.5rem;
+        text-shadow: 2px 2px black;
+        font-family: "Viaoda Libre", cursive;
+        font-weight: 500;
+      }
+
+      /* Landing page navigation - Simple dropdown style */
+      nav {
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+      }
+
+      nav li {
+        margin: 0.75rem 0.75rem 0.5rem;
+      }
+
+      nav a {
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: "Viaoda Libre", cursive;
+        text-transform: uppercase;
+        text-shadow: 2px 2px black;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+      }
+
+      nav a:hover {
+        color: rgb(206, 209, 209);
+        cursor: pointer;
+      }
+
+      .nav-toggle:checked ~ nav {
+        transform: scale(1, 1);
+      }
+
+      .nav-toggle:checked ~ nav a {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 150ms;
+      }
+
+      .nav-toggle {
+        display: none;
+        height: 100%;
+      }
+
+      .nav-toggle-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 1.5rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-toggle-label span,
+      .nav-toggle-label span::before,
+      .nav-toggle-label span::after {
+        display: block;
+        background: white;
+        height: 0.219rem;
+        width: 2rem;
+        border-radius: 0.125rem;
+        position: relative;
+      }
+
+      .nav-toggle-label span::before,
+      .nav-toggle-label span::after {
+        content: "";
+        position: absolute;
+      }
+
+      .nav-toggle-label span::before {
+        top: 9px;
+      }
+
+      .nav-toggle-label span::after {
+        bottom: 9px;
+      }
+
+      /* Skip link for accessibility */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: white;
+        color: black;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        z-index: 1000;
+        transition: top 0.3s;
+      }
+
+      .skip-link:focus {
+        top: 6px;
+      }
+
+      /* Responsive design - exact original breakpoints and behavior */
+      @media screen and (min-width: 48rem) {
+        nav li {
+          margin: 1rem 1.5rem;
+        }
+
+        nav a {
+          font-size: 1.25rem;
+        }
+      }
+
+      @media screen and (min-width: 52rem) {
+        .nav-toggle-label {
+          display: none;
+        }
+
+        header {
+          display: grid;
+        }
+
+        .name {
+          font-size: 4.5rem;
+        }
+
+        nav {
+          all: unset;
+          grid-column: 3 / 4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        nav a {
+          opacity: 1;
+        }
+
+        nav ul {
+          display: flex;
+          margin-top: 1.5rem;
+        }
+
+        nav li {
+          margin: 1rem;
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body data-page="home">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <h1 class="name">Nina Lane</h1>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
@@ -21,21 +225,19 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li>
-            <a href="https://ninalane.bandcamp.com/" target="_blank">Music</a>
+            <a href="https://ninalane.bandcamp.com/" target="_blank" rel="noopener noreferrer">Music</a>
           </li>
-          <li>
-            <a href="video.html">Video</a>
-          </li>
+          <li><a href="video.html">Video</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="duo.html">Duo</a></li>
           <li class="nav-item">
             <a
               href="https://www.facebook.com/NinaLaneMusic"
-              class="nav-link"
               target="_blank"
+              rel="noopener noreferrer"
               ><img
-                src="./images/facebook.png"
-                alt="facebook logo"
+                src="images/facebook.png"
+                alt="Facebook"
                 width="25"
                 height="25"
             /></a>
@@ -46,6 +248,9 @@
         <span></span>
       </label>
     </header>
-    <div class="bg-img"></div>
+
+    <main id="main-content">
+      <div class="bg-img"></div>
+    </main>
   </body>
 </html>

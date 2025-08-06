@@ -4,134 +4,223 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nina Lane & Bryan Owens</title>
-    <link rel="stylesheet" href="./css/duo.css" />
+    <title>Nina Lane & Bryan Owens - Duo</title>
+    <meta
+      name="description"
+      content="Nina Lane & Bryan Owens - Musical duo performing contemporary original songs with alt-folk, bluesy, jazzy crossover style."
+    />
+    <meta name="author" content="Nina Lane" />
+
+    <!-- Security -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self';"
+    />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="images/duo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Annie+Use+Your+Telescope&family=Kaushan+Script&family=Neucha&family=Roboto+Flex:opsz@8..144&family=Thasadith&family=Viaoda+Libre&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Viaoda+Libre:wght@400;500;600;700&family=Thasadith:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Shared base styles -->
+    <link rel="stylesheet" href="css/shared-base.css" />
+
+    <style>
+      /* Page-specific critical CSS only */
+
+      .img-duo {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* Body styling handled by shared-base.css data-page="duo" */
+
+      /* Duo page unique header - background color */
+      header {
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+        z-index: 999;
+        width: 100%;
+        background: var(--header-bg-light);
+      }
+
+      /* Duo page unique name - smaller font, longer text */
+      .name-duo {
+        color: var(--text-dark);
+        font-size: 1.7rem;
+        padding-left: 2rem;
+        font-family: var(--font-primary);
+        font-weight: 600;
+      }
+
+      .name-duo:hover {
+        color: rgb(87, 88, 88);
+      }
+
+      /* Duo page navigation - override shared styles */
+      .nav-toggle-label {
+        left: 0;
+        margin-left: 1.5rem;
+      }
+
+      nav li {
+        margin: 0.75rem 1rem 0.5rem;
+      }
+
+      /* Common text and layout styles now in shared-base.css */
+
+      @media screen and (min-width: 48rem) {
+        nav li {
+          margin: 1rem 1.5rem;
+        }
+
+        nav a {
+          font-size: 1.25rem;
+        }
+
+        .name-duo {
+          font-size: 3rem;
+        }
+      }
+
+      @media screen and (min-width: 52rem) {
+        /* Duo page unique desktop layout - flex instead of grid */
+        header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
+          position: relative;
+        }
+
+        .name-duo {
+          font-size: 4.5rem;
+          padding: 0;
+          text-align: center;
+        }
+
+        nav {
+          all: unset;
+          width: 100%;
+        }
+
+        nav a {
+          color: var(--text-dark);
+          text-shadow: 0px 0px;
+        }
+
+        nav ul {
+          display: flex;
+          justify-content: center;
+        }
+
+        nav a:hover {
+          color: rgb(87, 88, 88);
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body data-page="duo">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="header">
       <div>
         <h1>
           <a href="index.html" class="name-duo">Nina Lane & Bryan Owens</a>
         </h1>
       </div>
-      <div>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <nav>
-          <ul>
-            <li><a href="about.html" class="nav-item">About</a></li>
-            <li>
-              <a
-                href="https://ninalane.bandcamp.com/"
-                class="nav-item"
-                target="_blank"
-                >Music</a
-              >
-            </li>
-            <li>
-              <a href="video.html" class="nav-item">Video</a>
-            </li>
-            <li><a href="contact.html" class="nav-item">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
+      <div id="nav-container">
+        <!-- Navigation inserted by JavaScript -->
       </div>
     </header>
-    <img src="../images/duo.jpg" class="img-duo" alt="Photo of Nina" />
-    <div class="center-text">
-      <p>
-        Nina Lane and Bryan Owens have been performing, touring, writing and
-        recording music together since their paths crossed two decades ago in
-        the South Island of New Zealand. The duo play contemporary original
-        songs inspired by a fusion of musical genres - an alt-folk bluesy,
-        jazzy, crossover. They accompany themselves on a range of instruments
-        like the bouzouki, mandolin, fiddle and guitar and include well-blended
-        vocal harmonies.
-      </p>
-      <br />
-      <p>
-        Singer-songwriter guitarist Nina Lane is the lyricist who writes about
-        intriguing people and places from her travels, the shifting sands of
-        love and the magnetic pull of her birthplace Aotearoa, always calling
-        her back home. “Her work reflects her love of the natural environment
-        without becoming saccharine” Hauraki Herald. “A musician of dedicated
-        quality and intellect” Paul Ubana Jones. “What stops people in their
-        tracks is her unique voice, a rare instrument with deep glowing tones
-        like liquid honey” Jo Hardy. Nina currently teaches singing one-on-one
-        to children and adults and facilitates ongoing songwriting workshops in
-        the Whangarei district.
-      </p>
-      <br />
-      <p>
-        Bryan Owens is an imaginative, multi-instrumentalist and master of
-        soundscapes. As an accompanist he adds layers of colour and texture to
-        the music on a variety of instruments, including mandolin, bouzouki,
-        guitar, fiddle and vocal harmonies. Bryan has recorded and performed
-        with a wide range of musical ensembles from rock bands to
-        singer-songwriters in NZ & America. He transcribed and published a
-        tune-book called ‘Bryan’s Bizaar’ - a collection of tunes from near and
-        far. Currently Bryan gives music lessons at Onerahi Primary school in
-        Northland. He also teaches guitar and ukulele classes to adults with CEW
-        ‘Community Education Whangarei’ and facilitates a weekly group class for
-        teens and adults in Traditional Folk Music. He hosts a live folk music
-        session at ‘The Judge' in Whangarei.
-      </p>
-      <br />
-      <p>
-        The duo recently returned after a 20 year stint in the Pacific
-        Northwest, USA. They have co-produced a new album of original songs
-        called ‘Holding the Flame’ and their public performances include
-        well-refined songs from the new album combined with original lively folk
-        melodies (now available on Bandcamp).
-      </p>
-      <br />
-      <p>For inquiries, please contact:</p>
-      <br />
-      <p><strong>ninalanemusic@gmail.com</strong></p>
-    </div>
-    <div class="footer-container">
-      <ul class="footer">
-        <li class="footer-item">
-          <a
-            href="https://www.facebook.com/NinaLaneMusic"
-            class="fb social-link"
-            target="_blank"
-            ><img
-              src="../images/facebook.png"
-              alt="image black facebook logo png @transparentpng.com"
-              alt="facebook logo"
-              width="25"
-              height="25"
-          /></a>
-        </li>
-        <li class="footer-item">
-          <a href="https://ninalane.bandcamp.com/" target="_blank"
-            ><img
-              class="bc social-link"
-              src="../images/bandcamp.png"
-              alt="bandcamp logo"
-              width="135"
-              height="40"
-          /></a>
-        </li>
-        <li class="footer-item">
-          <a
-            href="https://www.youtube.com/@ninalanemusic9493/playlists"
-            class="yt social-link"
-            target="_blank"
-            ><img src="../images/youtube.png" alt="youtube logo" height="20"
-          /></a>
-        </li>
-      </ul>
-    </div>
+
+    <main id="main-content">
+      <img
+        src="images/duo.jpg"
+        class="img-duo"
+        alt="Nina Lane & Bryan Owens together"
+      />
+      <div class="text-container">
+        <h2 class="title">Duo</h2>
+        <div class="text">
+          <p>
+            Nina Lane and Bryan Owens are a musical duo based in Whangarei, New
+            Zealand. They perform contemporary original songs inspired by a
+            fusion of musical genres, including alt-folk, bluesy, jazzy
+            crossover styles. Their music features a range of instruments such
+            as bouzouki, mandolin, fiddle, and guitar, complemented by
+            well-blended vocal harmonies.
+          </p>
+          <br />
+          <p>
+            The duo has recently returned to New Zealand after a 20-year stint
+            in the Pacific Northwest, USA. They have co-produced a new album of
+            original songs called "Holding the Flame," which is available on
+            Bandcamp.
+          </p>
+          <p>
+            Nina Lane and Bryan Owens have been performing, touring, writing and
+            recording music together since their paths crossed two decades ago
+            in the South Island of New Zealand. The duo play contemporary
+            original songs inspired by a fusion of musical genres - an alt-folk
+            bluesy, jazzy, crossover. They accompany themselves on a range of
+            instruments like the bouzouki, mandolin, fiddle and guitar and
+            include well-blended vocal harmonies.
+          </p>
+          <br />
+          <p>
+            Singer-songwriter guitarist Nina Lane is the lyricist who writes
+            about intriguing people and places from her travels, the shifting
+            sands of love and the magnetic pull of her birthplace Aotearoa,
+            always calling her back home. "Her work reflects her love of the
+            natural environment without becoming saccharine" Hauraki Herald. "A
+            musician of dedicated quality and intellect" Paul Ubana Jones. "What
+            stops people in their tracks is her unique voice, a rare instrument
+            with deep glowing tones like liquid honey" Jo Hardy. Nina currently
+            teaches singing one-on-one to children and adults and facilitates
+            ongoing songwriting workshops in the Whangarei district.
+          </p>
+          <br />
+          <p>
+            Bryan Owens is an imaginative, multi-instrumentalist and master of
+            soundscapes. As an accompanist he adds layers of colour and texture
+            to the music on a variety of instruments, including mandolin,
+            bouzouki, guitar, fiddle and vocal harmonies. Bryan has recorded and
+            performed with a wide range of musical ensembles from rock bands to
+            singer-songwriters in NZ & America. He transcribed and published a
+            tune-book called 'Bryan's Bizaar' - a collection of tunes from near
+            and far. Currently Bryan gives music lessons at Onerahi Primary
+            school in Northland. He also teaches guitar and ukulele classes to
+            adults with CEW 'Community Education Whangarei' and facilitates a
+            weekly group class for teens and adults in Traditional Folk Music.
+            He hosts a live folk music session at 'The Judge' in Whangarei.
+          </p>
+          <br />
+          <p>
+            The duo recently returned after a 20 year stint in the Pacific
+            Northwest, USA. They have co-produced a new album of original songs
+            called 'Holding the Flame' and their public performances include
+            well-refined songs from the new album combined with original lively
+            folk melodies (now available on Bandcamp).
+          </p>
+          <div class="center-text">
+            <p></p>
+            <br />
+            <p>For inquiries, please contact:</p>
+            <br />
+            <p><strong>ninalanemusic@gmail.com</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-container" id="footer-container">
+        <!-- Footer inserted by JavaScript -->
+      </div>
+    </main>
+
+    <script src="js/shared.js"></script>
   </body>
 </html>

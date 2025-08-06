@@ -4,140 +4,211 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video</title>
-    <link rel="stylesheet" href="../css/video.css" />
+    <title>Video - Nina Lane</title>
+    <meta name="description" content="Nina Lane videos - Watch performances and music videos from singer-songwriter Nina Lane." />
+    <meta name="author" content="Nina Lane" />
+
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; frame-src https://www.youtube.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self';" />
+
+    <!-- Performance optimizations -->
+    <link rel="preload" as="image" href="images/hand.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Annie+Use+Your+Telescope&family=Kaushan+Script&family=Neucha&family=Roboto+Flex:opsz@8..144&family=Thasadith&family=Viaoda+Libre&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Shared base styles -->
+    <link rel="stylesheet" href="css/shared-base.css" />
+
+    <style>
+      /* Page-specific critical CSS only */
+      .img-video {
+        height: 75vh;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* Video page unique header - has background */
+      header {
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        z-index: 999;
+        background: var(--bg-light-gray);
+      }
+
+      .name-video {
+        color: var(--text-dark);
+        font-size: 3rem;
+        padding-left: 2rem;
+        font-family: var(--font-primary);
+        font-weight: 600;
+      }
+
+      .name-video:hover {
+        color: rgb(87, 88, 88);
+      }
+
+      .nav-toggle-label {
+        left: 0;
+        margin-left: 1.5rem;
+      }
+
+      /* Video page content */
+      .container {
+        padding: 0 1rem;
+      }
+
+      .vidwrapper {
+        width: 100%;
+        max-width: 50rem;
+        margin: 3rem auto;
+      }
+
+      .vidcontainer {
+        width: 100%;
+        max-width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+      }
+
+      .vidcontainer iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .title {
+        font-family: var(--font-primary);
+        font-weight: 700;
+        color: var(--text-dark);
+        text-align: center;
+        padding-top: 2rem;
+      }
+
+      /* Video page responsive design */
+      @media screen and (min-width: 52rem) {
+        header {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin: 0;
+          position: fixed;
+          box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.15);
+        }
+
+        .img-video {
+          margin-top: calc(12vh);
+        }
+
+        .name-video {
+          font-size: 4.5rem;
+          padding: 0;
+        }
+
+        #nav-container nav {
+          all: unset;
+        }
+
+        nav a {
+          color: var(--text-dark);
+          text-shadow: none;
+        }
+
+        nav a:hover {
+          color: rgb(87, 88, 88);
+        }
+
+        nav ul {
+          margin-top: 2rem;
+        }
+
+        .nav-item {
+          margin: 0;
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body data-page="video">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="header">
       <div>
         <h1><a href="index.html" class="name-video">Nina Lane</a></h1>
       </div>
-      <div>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <nav>
-          <ul>
-            <li><a href="about.html" class="nav-item">About</a></li>
-            <li>
-              <a
-                href="https://ninalane.bandcamp.com/"
-                class="nav-item"
-                target="_blank"
-                >Music</a
-              >
-            </li>
-            <li>
-              <a href="video.html" class="nav-item">Video</a>
-            </li>
-            <li><a href="contact.html" class="nav-item">Contact</a></li>
-            <li><a href="duo.html">Duo</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
+      <div id="nav-container">
+        <!-- Navigation inserted by JavaScript -->
       </div>
     </header>
-    <img src="../images/hand.jpg" class="img-video" alt="Photo of Nina" />
-    <h1 class="title">Video</h1>
-    <div class="container">
-      <div class="vidwrapper">
-        <div class="vidcontainer">
-          <iframe
-            src="https://www.youtube.com/embed/0nKFMgJQMWQ"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+
+    <main id="main-content">
+      <img src="images/hand.jpg" class="img-video" alt="Nina Lane's hands on guitar" />
+      <h1 class="title">Video</h1>
+      <div class="container">
+        <div class="vidwrapper">
+          <div class="vidcontainer">
+            <iframe
+              src="https://www.youtube.com/embed/0nKFMgJQMWQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="vidwrapper">
+          <div class="vidcontainer">
+            <iframe
+              src="https://www.youtube.com/embed/M3JwQ3bC9UA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="vidwrapper">
+          <div class="vidcontainer">
+            <iframe
+              src="https://www.youtube.com/embed/qNWZBjbpkHg"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="vidwrapper">
+          <div class="vidcontainer">
+            <iframe
+              src="https://www.youtube.com/embed/KndkBeota7g"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="vidwrapper">
+          <div class="vidcontainer">
+            <iframe
+              src="https://www.youtube.com/embed/FmLRTsPd9IQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
-      <div class="vidwrapper">
-        <div class="vidcontainer">
-          <iframe
-            src="https://www.youtube.com/embed/M3JwQ3bC9UA"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
+      <div class="footer-container" id="footer-container">
+        <!-- Footer inserted by JavaScript -->
       </div>
-      <div class="vidwrapper">
-        <div class="vidcontainer">
-          <iframe
-            src="https://www.youtube.com/embed/qNWZBjbpkHg"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-      <div class="vidwrapper">
-        <div class="vidcontainer">
-          <iframe
-            src="https://www.youtube.com/embed/KndkBeota7g"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-      <div class="vidwrapper">
-        <div class="vidcontainer">
-          <iframe
-            src="https://www.youtube.com/embed/FmLRTsPd9IQ"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="footer-container">
-      <ul class="footer">
-        <li class="footer-item">
-          <a
-            href="https://www.facebook.com/NinaLaneMusic"
-            class="fb social-link"
-            target="_blank"
-            ><img
-              src="../images/facebook.png"
-              alt="image black facebook logo png @transparentpng.com"
-              alt="facebook logo"
-              width="25"
-              height="25"
-          /></a>
-        </li>
-        <li class="footer-item">
-          <a href="https://ninalane.bandcamp.com/" target="_blank"
-            ><img
-              class="bc social-link"
-              src="../images/bandcamp.png"
-              alt="bandcamp logo"
-              width="135"
-              height="40"
-          /></a>
-        </li>
-        <li class="footer-item">
-          <a
-            href="https://www.youtube.com/@ninalanemusic9493/playlists"
-            class="yt social-link"
-            target="_blank"
-            ><img src="../images/youtube.png" alt="youtube logo" height="20"
-          /></a>
-        </li>
-      </ul>
-    </div>
+    </main>
+
+    <script src="js/shared.js"></script>
   </body>
 </html>

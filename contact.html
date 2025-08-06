@@ -4,87 +4,146 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="./css/contact.css" />
+    <title>Contact - Nina Lane</title>
+    <meta
+      name="description"
+      content="Contact Nina Lane - Get in touch for bookings, inquiries, and music collaboration opportunities."
+    />
+    <meta name="author" content="Nina Lane" />
+
+    <!-- Security -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self';"
+    />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="images/black.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Annie+Use+Your+Telescope&family=Kaushan+Script&family=Neucha&family=Roboto+Flex:opsz@8..144&family=Thasadith&family=Viaoda+Libre&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Viaoda+Libre:wght@400;500;600;700&family=Thasadith:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Shared base styles -->
+    <link rel="stylesheet" href="css/shared-base.css" />
+
+    <style>
+      /* Page-specific critical CSS only */
+      .img-contact {
+        height: 75vh;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* Contact page unique header - has background */
+      header {
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+        z-index: 999;
+        width: 100%;
+        background: var(--header-bg-light);
+      }
+
+      .name-contact {
+        color: var(--text-dark);
+        font-size: 3rem;
+        padding-left: 2rem;
+        font-family: var(--font-primary);
+        font-weight: 600;
+      }
+
+      .name-contact:hover {
+        color: rgb(87, 88, 88);
+      }
+
+      /* Contact page navigation - override shared styles */
+      .nav-toggle-label {
+        left: 0;
+        margin-left: 1.5rem;
+      }
+
+      nav li {
+        margin: 0.75rem 1rem 0.5rem;
+      }
+
+      /* Common text and layout styles now in shared-base.css */
+
+      @media screen and (min-width: 48rem) {
+        nav li {
+          margin: 1rem 1.5rem;
+        }
+
+        nav a {
+          font-size: 1.25rem;
+        }
+      }
+
+      @media screen and (min-width: 52rem) {
+        header {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin: 0;
+          position: fixed;
+        }
+
+        .name-contact {
+          font-size: 4.5rem;
+          padding: 0;
+        }
+
+        .img-contact {
+          margin-top: calc(12vh);
+        }
+
+        nav {
+          all: unset;
+        }
+
+        nav a {
+          color: var(--text-dark);
+          text-shadow: 0px 0px;
+        }
+
+        nav ul {
+          margin-top: 2rem;
+        }
+
+        nav a:hover {
+          color: rgb(87, 88, 88);
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body data-page="contact">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="header">
       <div>
         <h1><a href="index.html" class="name-contact">Nina Lane</a></h1>
       </div>
-      <div>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <nav>
-          <ul>
-            <li><a href="about.html" class="nav-item">About</a></li>
-            <li>
-              <a
-                href="https://ninalane.bandcamp.com/"
-                class="nav-item"
-                target="_blank"
-                >Music</a
-              >
-            </li>
-            <li>
-              <a href="video.html" class="nav-item">Video</a>
-            </li>
-            <li><a href="contact.html" class="nav-item">Contact</a></li>
-            <li><a href="duo.html">Duo</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
+      <div id="nav-container">
+        <!-- Navigation inserted by JavaScript -->
       </div>
     </header>
-    <img src="../images/black.jpg" class="img-contact" alt="Photo of Nina" />
-    <div class="center-text">
-      <p>For inquiries, please contact:</p>
-      <br />
-      <p><strong>ninalanemusic@gmail.com</strong></p>
-    </div>
-    <div class="footer-container">
-      <ul class="footer">
-        <li class="footer-item">
-          <a
-            href="https://www.facebook.com/NinaLaneMusic"
-            class="fb social-link"
-            target="_blank"
-            ><img
-              src="../images/facebook.png"
-              alt="image black facebook logo png @transparentpng.com"
-              alt="facebook logo"
-              width="25"
-              height="25"
-          /></a>
-        </li>
-        <li class="footer-item">
-          <a href="https://ninalane.bandcamp.com/" target="_blank"
-            ><img
-              class="bc social-link"
-              src="../images/bandcamp.png"
-              alt="bandcamp logo"
-              width="135"
-              height="40"
-          /></a>
-        </li>
-        <li class="footer-item">
-          <a
-            href="https://www.youtube.com/@ninalanemusic9493/playlists"
-            class="yt social-link"
-            target="_blank"
-            ><img src="../images/youtube.png" alt="youtube logo" height="20"
-          /></a>
-        </li>
-      </ul>
-    </div>
+
+    <main id="main-content">
+      <img
+        src="images/black.jpg"
+        class="img-contact"
+        alt="Nina Lane portrait"
+      />
+      <div class="center-text">
+        <p>For inquiries, please contact:</p>
+        <br />
+        <p><strong>ninalanemusic@gmail.com</strong></p>
+      </div>
+      <div class="footer-container" id="footer-container">
+        <!-- Footer inserted by JavaScript -->
+      </div>
+    </main>
+
+    <script src="js/shared.js"></script>
   </body>
 </html>
