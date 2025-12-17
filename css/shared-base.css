@@ -211,6 +211,20 @@ body[data-page="duo"] .footer-container {
   margin-top: auto;
 }
 
+/* Special song-garden page body styling */
+body[data-page="song-garden"] {
+  background: var(--bg-medium-gray);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Song Garden page specific footer margin */
+body[data-page="song-garden"] .footer-container {
+  margin-top: auto;
+}
+
 /* Common responsive breakpoints */
 @media screen and (min-width: 48rem) {
   nav li {

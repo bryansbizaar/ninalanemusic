@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Song Garden Music Time</title>
+    <meta
+      name="description"
+      content="Song Garden Music Time - Nina Lane & Bryan Owens lead song and movement with children."
+    />
+    <meta name="author" content="Nina Lane" />
+
+    <!-- Security -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self';"
+    />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="images/sg-music-time.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Viaoda+Libre:wght@400;500;600;700&family=Thasadith:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Shared base styles -->
+    <link rel="stylesheet" href="css/shared-base.css" />
+
+    <style>
+      /* Page-specific critical CSS only */
+
+      .img-song-garden {
+        width: 100%;
+        height: 75vh;
+        object-fit: cover;
+        object-position: center 30%;
+      }
+
+      /* Body styling handled by shared-base.css data-page="song-garden" */
+
+      /* Song Garden page unique header - background color */
+      header {
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+        z-index: 999;
+        width: 100%;
+        background: var(--header-bg-light);
+      }
+
+      /* Song Garden page unique name - smaller font, longer text */
+      .name-song-garden {
+        color: var(--text-dark);
+        font-size: 1.7rem;
+        padding-left: 2rem;
+        font-family: var(--font-primary);
+        font-weight: 600;
+      }
+
+      .name-song-garden:hover {
+        color: rgb(87, 88, 88);
+      }
+
+      /* Song Garden page navigation - override shared styles */
+      .nav-toggle-label {
+        left: 0;
+        margin-left: 1.5rem;
+      }
+
+      nav li {
+        margin: 0.75rem 1rem 0.5rem;
+      }
+
+      /* Common text and layout styles now in shared-base.css */
+
+      @media screen and (min-width: 48rem) {
+        nav li {
+          margin: 1rem 1.5rem;
+        }
+
+        nav a {
+          font-size: 1.25rem;
+        }
+
+        .name-song-garden {
+          font-size: 3rem;
+        }
+      }
+
+      @media screen and (min-width: 52rem) {
+        /* Song Garden page unique desktop layout - flex instead of grid */
+        header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
+          position: relative;
+        }
+
+        .name-song-garden {
+          font-size: 4.5rem;
+          padding: 0;
+          text-align: center;
+        }
+
+        nav {
+          all: unset;
+          width: 100%;
+        }
+
+        nav a {
+          color: var(--text-dark);
+          text-shadow: 0px 0px;
+        }
+
+        nav ul {
+          display: flex;
+          justify-content: center;
+        }
+
+        nav a:hover {
+          color: rgb(87, 88, 88);
+        }
+      }
+    </style>
+  </head>
+  <body data-page="song-garden">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+      <div>
+        <h1>
+          <a href="index.html" class="name-song-garden"
+            >Song Garden Music Time</a
+          >
+        </h1>
+      </div>
+      <div id="nav-container">
+        <!-- Navigation inserted by JavaScript -->
+      </div>
+    </header>
+
+    <main id="main-content">
+      <img
+        src="images/sg-music-time.webp"
+        class="img-song-garden"
+        alt="Nina Lane and Bryan Owens leading Song Garden Music Time"
+      />
+      <div class="text-container">
+        <h2 class="title">About</h2>
+        <div class="text">
+          <div class="center-text">
+            <p>Nina Lane and Bryan Owens present Song Garden Music Time</p>
+          </div>
+
+          <p>
+            Many young children have an innate love of music and movement. Song
+            Garden Music Time is an interactive, playful program that celebrates
+            the joy of music, movement, and song in a nurturing group setting
+            for children aged approximately 2-8 years. Sessions feature a
+            children's repertoire of classic and contemporary songs, accompanied
+            live on acoustic guitar, mandolin, and fiddle.
+          </p>
+          <br />
+          <p>
+            Nina Lane and Bryan Owens began their musical collaboration in 1998
+            and bring decades of experience as professional musicians,
+            songwriters, recording artists, and educators. After touring
+            extensively throughout New Zealand, they relocated to Portland,
+            Oregon, USA in 2001, where they worked in the music and education
+            fields for over 20 years. In 2009, they co-founded a
+            Steiner-inspired program, Song Garden School, and facilitated weekly
+            children's music programs for 11 years.
+          </p>
+          <br />
+          <p>
+            Bryan Owens received his Certificate of Waldorf School Educators in
+            2004 and has taught in both early childhood and primary grades. His
+            teaching experience includes Early Head Start, Portland Waldorf
+            School, Swallowtail, Shining Star, and Song Garden School in the
+            USA. Bryan has a particular passion for traditional folk music,
+            specialising in tunes from around the world.
+          </p>
+          <br />
+          <p>
+            Nina Lane studied at the Micha-el Early Childhood Teachers Institute
+            in Portland, Oregon. Her training included Simplicity Parenting,
+            Boys Alive!, Juniper Tree School of Puppetry and Arts, Positive
+            Discipline, and the Steiner approach to music and the young child.
+            From 2000-2019, she worked as an early childhood educator at Early
+            Head Start, New Day School, Cedarwood Waldorf School and Song Garden
+            School. Nina also brings a deep passion for creative songwriting.
+          </p>
+          <br />
+          <p>
+            After concluding a 20-year chapter in the USA, Nina and Bryan have
+            returned to New Zealand and now call Northland home. Nina teaches
+            singing one-on-one with adults and children and facilitates a
+            creative songwriting group in Whangārei. Bryan works as a music
+            educator in traditional folk music and with Whangārei Youth Music.
+          </p>
+
+          <br />
+          <div class="center-text">
+            <p>For inquiries, please contact:</p>
+            <br />
+            <p><strong>ninalanemusic@gmail.com</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-container" id="footer-container">
+        <!-- Footer inserted by JavaScript -->
+      </div>
+    </main>
+
+    <script src="js/shared.js"></script>
+  </body>
+</html>
